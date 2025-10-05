@@ -13,7 +13,9 @@ const Dynamicmeme = () => {
   const [successMessage, setSuccessMessage] = useState('');
 
   // API base URL
-  const API_BASE_URL = 'http://localhost:5000';
+  const API_BASE_URL = process.env.NODE_ENV === 'production' 
+    ? '' // Use relative URLs in production (same domain)
+    : 'http://localhost:5000';
 
   // Load categories on component mount
   useEffect(() => {
