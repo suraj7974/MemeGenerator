@@ -12,9 +12,9 @@ const Dynamicmeme = () => {
   const [errorMessage, setErrorMessage] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
 
-  // API base URL
+  // API base URL - Update this with your actual Vercel URL
   const API_BASE_URL = process.env.NODE_ENV === 'production' 
-    ? '' // Use relative URLs in production (same domain)
+    ? 'meme-generator-nine-delta.vercel.app' // Replace with your actual Vercel URL
     : 'http://localhost:5000';
 
   // Load categories on component mount
