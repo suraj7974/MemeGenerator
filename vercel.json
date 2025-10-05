@@ -6,14 +6,22 @@
       "use": "@vercel/static"
     },
     {
-      "src": "meme-bot-backend/app.py",
+      "src": "api/*.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
+      "src": "/api/categories",
+      "dest": "api/categories.py"
+    },
+    {
+      "src": "/api/generate",
+      "dest": "api/generate.py"
+    },
+    {
       "src": "/api/(.*)",
-      "dest": "meme-bot-backend/app.py"
+      "dest": "api/index.py"
     },
     {
       "src": "/(.*)",
